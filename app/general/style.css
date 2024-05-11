@@ -1,0 +1,173 @@
+.gu-mirror {
+    position: fixed !important;
+    margin: 0 !important;
+    z-index: 9999 !important;
+    opacity: .8
+}
+
+.gu-hide {
+    display: none !important
+}
+
+.gu-unselectable {
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important
+}
+
+.gu-transit {
+    opacity: .2
+}
+
+body {
+    background: rgb(218, 216, 216);
+}
+
+#container {
+    margin: 0 auto;
+    padding: 15px 15px;
+}
+
+.draguble .element {
+    background: #fdebbe;
+    cursor: pointer;
+}
+
+.element {
+    padding: 10px;
+    border: 1px dashed #808080;
+    margin: 10px 0;
+    background: white;
+    border-radius: 5px;
+}
+
+.easy-element, .folder-element {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1px;
+}
+
+.content-cell {
+    word-wrap: break-word;
+}
+
+.button-panel {
+    display: flex;
+    right: 20px;
+}
+
+.button-panel > button {
+    margin-left: 1px;
+}
+
+.easy-element-content {
+    width: calc(100% - 117px);
+}
+
+.title-cell {
+    margin-right: 2px;
+}
+
+.composite-element-container {
+    padding: 0 0 0 15px;
+}
+
+.dropdown-composite-line {
+    margin: 5px 0;
+}
+
+.dropdown-menu, .dropdown-menu hr {
+    margin: 0;
+    padding: 0;
+    border: 1px dashed #cbcbcb;
+    border-bottom-width: 0;
+}
+
+.dropdown-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#global-folder-container {
+    display: none;
+}
+
+#content-container, #global-folder-container {
+    margin-top: 15px;
+}
+
+.element:active {
+    cursor: move;
+}
+
+
+.folder-button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.folder-button img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.folder-button p {
+    margin: 0;
+}
+
+.folder-container {
+    display: none;
+}
+
+.crumb1 {
+    margin: 0;
+    padding-left: 20px
+}
+
+.crumb1 li {
+    display: inline-block;
+    padding: 0 10px;
+    background: #6c757d;
+    transform: skew(-20deg);
+    cursor: pointer;
+    opacity: 0.8;
+    margin: 2px;
+}
+
+.crumb1 li:hover {
+    background: #000000;
+}
+
+.crumb1 li a {
+    display: block;
+    transform: skew(20deg);
+    color: white;
+    text-decoration: none;
+    user-select: none;
+}
+
+#save_div {
+    display: none;
+}
+
+.folder {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.folder-active {
+    display: block;
+}
+
+[contenteditable="true"]:focus-visible {
+
+}

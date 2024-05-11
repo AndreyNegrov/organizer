@@ -1,0 +1,40 @@
+<div class="modal fade" id="complexModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Заголовок + несколько строк контента</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="complex-lines-container">
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" style="width: 135px">Заголовок:</span>
+                        <input type="text" class="form-control" id="easy-complex-title">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span style="width: 45px; visibility: hidden"></span>
+                        <span class="input-group-text" style="width: 90px">Контент:</span>
+                        <input type="text" class="form-control easy-complex-content">
+                    </div>
+                    <div class="input-group mb-3">
+                        <span style="width: 45px; visibility: hidden"></span>
+                        <span class="input-group-text" style="width: 90px">Контент:</span>
+                        <input type="text" class="form-control easy-complex-content">
+                    </div>
+                </div>
+
+                <div class="input-group mb-3" style="justify-content: flex-end">
+                    <button type="button" class="btn btn-outline-success" style="font-weight: bold;"
+                            onclick="addComplexLine()">&nbsp;+&nbsp;
+                    </button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отменить</button>
+                <button type="button" class="btn btn-primary save_easy" data-bs-dismiss="modal"
+                        onclick="addEasyComplexElement()">Сохранить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

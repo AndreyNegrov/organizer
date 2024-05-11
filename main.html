@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="EN">
+<head>
+    <meta charset="UTF-8">
+    <title>Органайзер</title>
+</head>
+
+<body>
+
+<div class="save_easy" id="save_div"></div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Удалить элемент?</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отменить</button>
+                <button type="button" class="btn btn-danger save_easy" data-bs-dismiss="modal"
+                        onclick="removeElement()">Удалить
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="container">
+    <div style="display: flex; justify-content: space-between">
+    <div class="div" style="display: flex; align-items: center;">
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" version="1.1" viewBox="0 0 32 32">
+                    <rect style="fill:#ffffff" width="4" height="20" x="-18" y="6" transform="matrix(0,-1,1,0,0,0)"></rect>
+                    <rect style="fill:#ffffff" width="4" height="20" x="14" y="6"></rect>
+                </svg>
+            </button>
+            <ul class="dropdown-menu" id="element-dropdown-menu"></ul>
+        </div>
+        &nbsp;&nbsp;
+        <button class="btn btn-outline-secondary btn-sm" onclick="dragulaTootle()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="5 9 2 12 5 15"></polyline>
+                <polyline points="9 5 12 2 15 5"></polyline>
+                <polyline points="15 19 12 22 9 19"></polyline>
+                <polyline points="19 9 22 12 19 15"></polyline>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="12" y1="2" x2="12" y2="22"></line>
+            </svg>
+        </button>
+
+        <ul id="crumb1" class="crumb1"></ul>
+    </div>
+
+        <button id="login-yandex-button" class="btn btn-outline-secondary btn-sm" style="display: none">Login</button>
+        <button id="logout-yandex-button" class="btn btn-outline-secondary btn-sm" style="display: none">Logout</button>
+    </div>
+
+
+    <div id="content-container"></div>
+</div>
+
+</body>
+</html>
