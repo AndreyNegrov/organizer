@@ -19,11 +19,11 @@ function addElementToDOM(element) {
 
     if (contentContainer.children.length > 0) {
         contentContainer.insertBefore(element, contentContainer.firstChild);
-        return contentContainer.querySelector('div');
     } else {
         contentContainer.appendChild(element);
-        return contentContainer.querySelectorAll('div')[container.querySelectorAll('div').length - 1];
     }
+
+    return contentContainer.querySelector('div');
 }
 
 function copyToBuffer(elem) {
