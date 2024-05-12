@@ -44,9 +44,9 @@ body {
 
 .easy-element, .folder-element {
     display: flex;
-    align-items: center;
     justify-content: space-between;
     margin-bottom: 1px;
+    align-items: flex-start;
 }
 
 .content-cell {
@@ -63,7 +63,7 @@ body {
 }
 
 .easy-element-content {
-    width: calc(100% - 117px);
+    width: calc(100% - 80px);
 }
 
 .title-cell {
@@ -168,6 +168,28 @@ body {
     display: block;
 }
 
-[contenteditable="true"]:focus-visible {
+.easy-element-content-cell, .title-string-content-cell {
+    display: block;
+}
 
+.title-string-title-cell {
+    font-weight: bold;
+    padding: 5px 0 5px 3px;
+}
+
+.title-string-content-cell {
+    padding: 5px;
+    flex-grow: 1;
+}
+
+.title-string-title-cell::before, .easy-element-content-cell::before, .title-string-content-cell::before {
+    content: attr(data-placeholder);
+    color: #c0c0c0;
+    display: block;
+    pointer-events: none;
+}
+
+.title-string-title-b {
+    font-weight: bold;
+    padding: 5px 0;
 }

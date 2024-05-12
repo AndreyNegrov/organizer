@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     document.getElementById('login-yandex-button').onclick = () => {
-        ipcRenderer.send('login');
+        ipcRenderer.send('auth-window');
     }
 });
 

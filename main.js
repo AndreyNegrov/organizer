@@ -96,10 +96,6 @@ app.whenReady().then(() => {
         defaultSession.clearStorageData();
         event.sender.send('logout-processed');
     });
-
-    ipcMain.on('login', (event) => {
-        createLoginWindow(event);
-    });
 })
 
 function createLoginWindow(event) {

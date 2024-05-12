@@ -1,11 +1,9 @@
 function addEasyStringElement() {
 
-    const easyContent = document.getElementById('easy-string-content').value;
-
-    const elem = '\n    <div class="element">\n' +
+    const element = htmlToElement('\n<div class="element">\n' +
         '        <div class="easy-element">\n' +
         '            <div class="easy-element-content">\n' +
-        '                <span class="copy-content content-cell easy-element-content-cell" contenteditable="true" style="padding: 5px 3px">' + easyContent + '</span>\n' +
+        '                <span class="copy-content content-cell easy-element-content-cell" contenteditable="true" style="padding: 5px 3px" data-placeholder="Введите текст..."></span>\n' +
         '            </div>\n' +
         '            <div class="button-panel">\n' +
         '                <button class="btn btn-outline-dark btn-sm copy-button" onclick="copyToBuffer(this)">\n' +
@@ -16,32 +14,43 @@ function addEasyStringElement() {
         '                </button>\n' +
         '            </div>\n' +
         '        </div>\n' +
-        '    </div>\n'
-
-    let element = htmlToElement(elem);
+        '    </div>\n');
 
     const domElement = addElementToDOM(element);
-
-    addEventsToElement(domElement.getElementsByClassName('easy-element-content-cell')[0]);
+    const span = domElement.getElementsByClassName('easy-element-content-cell')[0]
+    addEventsToSpan(span);
+    setTimeout(()=> {span.focus();}, 200);
 }
 
 window.addEventListener('content-created', (event) => {
     for (let elem of document.getElementsByClassName('easy-element-content-cell')) {
-        addEventsToElement(elem);
+        addEventsToSpan(elem);
     }
 });
 
-function addEventsToElement(element) {
-    element.addEventListener('input', (event) => {
-        element.flagEditable = true;
+function addEventsToSpan(span) {
+    span.addEventListener('input', (event) => {
+        console.log('input');
+        span.flagEditable = true;
     });
 
-    element.addEventListener('blur', (event) => {
-        if (element.flagEditable) {
-            element.flagEditable = false;
-
+    span.addEventListener('focusout', (event) => {
+        console.log('focusout');
+        event.currentTarget.blur();
+        if (span.flagEditable) {
+            span.flagEditable = false;
+            console.log('save');
             const saveButton = document.getElementById('save_div');
             saveButton.click();
+        }
+    });
+
+    span.addEventListener('input', () => {
+        if (span.textContent) {
+            span.dataset.placeholder = '';
+        } else {
+            span.dataset.placeholder = 'Введите текст...';
+            span.innerHTML = '';
         }
     });
 }
