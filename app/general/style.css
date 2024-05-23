@@ -187,7 +187,9 @@ body {
 .title-string-content-cell {
     word-break: break-all;
     flex-grow: 1;
-    padding: 5px 3px;
+    padding: 5px;
+    line-height: 26px;
+    max-width: 100%;
 }
 
 .title-string-title-cell::before, .easy-element-content-cell::before, .title-string-content-cell::before {
