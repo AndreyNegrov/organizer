@@ -32,7 +32,7 @@ autoLauncher.isEnabled()
 
 function createWindow() {
     const win = new BrowserWindow({
-        width: 800,
+        width: 1200,
         height: 600,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
@@ -41,7 +41,7 @@ function createWindow() {
         autoHideMenuBar: true
     })
 
-    // win.webContents.openDevTools();
+    win.webContents.openDevTools();
 
     win.on('close', (ev) => {
         if (win?.isVisible()) {

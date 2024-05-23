@@ -1,7 +1,7 @@
 function addTitleStringElement() {
 
     let element = htmlToElement('\n    <div class="element">\n' +
-        '        <div class="easy-element">\n' +
+        '        <div class="title-string-element">\n' +
         '            <div class="title-string-element-content">\n' +
         '                <div class="title-string-title-cell" contenteditable="true" data-placeholder="Введите заголовок"></div><div class="title-string-title-b">:</div>\n' +
         '                <div class="copy-content title-string-content-cell" contenteditable="true" data-placeholder="Введите текст..."></div>\n' +
