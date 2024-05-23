@@ -42,7 +42,7 @@ body {
     border-radius: 5px;
 }
 
-.easy-element, .folder-element {
+.easy-element, .folder-element, .title-string-element {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1px;
@@ -62,8 +62,14 @@ body {
     margin-left: 1px;
 }
 
-.easy-element-content {
+.easy-element-content, .title-string-element-content {
     width: calc(100% - 80px);
+}
+
+.title-string-element-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .title-cell {
@@ -168,25 +174,29 @@ body {
     display: block;
 }
 
-.easy-element-content-cell, .title-string-content-cell {
+.easy-element-content-cell {
     display: block;
 }
 
 .title-string-title-cell {
     font-weight: bold;
-    padding: 5px 0 5px 3px;
+    padding: 5px 1px 5px 3px;
 }
 
 .title-string-content-cell {
-    padding: 5px;
+    word-break: break-all;
     flex-grow: 1;
+    padding: 5px 3px;
 }
 
 .title-string-title-cell::before, .easy-element-content-cell::before, .title-string-content-cell::before {
     content: attr(data-placeholder);
     color: #c0c0c0;
-    display: block;
     pointer-events: none;
+}
+
+.title-string-title-cell, .title-string-title-b, .title-string-content-cell {
+    display: inline-block;
 }
 
 .title-string-title-b {

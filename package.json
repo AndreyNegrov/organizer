@@ -27,6 +27,17 @@
     "electron-store": "^8.1.0"
   },
   "build": {
-    "asar": false
+    "appId": "com.organizer.app",
+    "productName": "Organizer",
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "deb",
+        "rpm",
+        "AppImage"
+      ]
+    }
   }
 }
