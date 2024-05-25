@@ -72,10 +72,6 @@ body {
     align-items: flex-start;
 }
 
-.title-cell {
-    margin-right: 2px;
-}
-
 .composite-element-container {
     padding: 0 0 0 15px;
 }
@@ -180,8 +176,14 @@ body {
 
 .title-string-title-cell {
     font-weight: bold;
-    padding: 5px 2px 5px 3px;
-    margin-left: -2px;
+    padding: 5px 1px 5px 3px;
+    margin-bottom: -5px;
+}
+
+.title-string-title-b {
+    font-weight: bold;
+    padding: 5px 0;
+    margin-bottom: -5px;
 }
 
 .title-string-content-cell {
@@ -200,9 +202,4 @@ body {
 
 .title-string-title-cell, .title-string-title-b, .title-string-content-cell {
     display: inline-block;
-}
-
-.title-string-title-b {
-    font-weight: bold;
-    padding: 5px 0;
 }

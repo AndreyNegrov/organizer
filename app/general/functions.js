@@ -27,7 +27,8 @@ function addElementToDOM(element) {
 }
 
 function copyToBuffer(elem) {
-    let element = elem.closest('.easy-element');
+    let element = elem.closest('.easy-element') ?? elem.closest('.title-string-element');
+
     let contentElem = element.querySelector('.copy-content');
     navigator.clipboard.writeText(contentElem.innerText);
 }
