@@ -48,3 +48,7 @@ function removeElement() {
 function removeElementPreparing(elem) {
     window.removeElementPrepared = elem.closest('.element');
 }
+
+function removeElementPreparingDeleteTag(elem) {
+    window.removeElementPrepared = elem.closest('.delete-element');
+}

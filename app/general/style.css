@@ -194,7 +194,20 @@ body {
     max-width: 100%;
 }
 
-.title-string-title-cell::before, .easy-element-content-cell::before, .title-string-content-cell::before {
+.complex-title-cell {
+    font-weight: bold;
+    padding: 5px 1px 5px 3px;
+}
+
+.complex-title-container {
+    display: flex;
+}
+
+.complex-content-cell {
+    padding: 5px 3px;
+}
+
+.title-string-title-cell::before, .easy-element-content-cell::before, .title-string-content-cell::before, .complex-title-cell::before, .complex-content-cell::before {
     content: attr(data-placeholder);
     color: #c0c0c0;
     pointer-events: none;
