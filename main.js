@@ -41,7 +41,7 @@ function createWindow() {
         autoHideMenuBar: true
     })
 
-    win.webContents.openDevTools();
+    // win.webContents.openDevTools();
 
     win.on('close', (ev) => {
         if (win?.isVisible()) {
